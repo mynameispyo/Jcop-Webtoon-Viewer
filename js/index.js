@@ -9,6 +9,8 @@ fs.readFile(dataJsonDir + '\\data.json', 'utf8', function (err,data) {
        if (err) {
            document.write(err);
        }
+       files.map(a=>{return parseInt(a)});
+       files.sort(function(a, b){return a - b}); 
        files.forEach(file => {
           let wtLink = document.createElement("a");
           wtLink.innerHTML = file;
