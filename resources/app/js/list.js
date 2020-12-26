@@ -19,7 +19,7 @@ fs.readdir(dir+"/"+$_GET.id, (err, files) => {
     files.forEach(file => {
         let wtLink = document.createElement("a");
         wtLink.innerHTML = file;
-        wtLink.href = `view.html?id=${encodeURIComponent($_GET.id)}&epi=${encodeURIComponent(file)}&dir=${encodeURIComponent(dir)}`;
+        wtLink.href = `view.html?id=${$_GET.id}&epi=${encodeURIComponent(file)}&dir=${$_GET.dir}`;
         let wtList = document.createElement("li")
         wtList.appendChild(wtLink)
         document.getElementById("wt-list").appendChild(wtList);

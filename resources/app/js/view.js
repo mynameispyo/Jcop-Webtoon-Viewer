@@ -13,14 +13,14 @@ let dir = $_GET["dir"];
 
 
 if(fs.existsSync(`${dir}/${id}/${parseInt(epi) - 1}/${parseInt(epi) - 1}.html`)){
-    document.getElementById("leftBtnLink").href = `./view.html?id=${encodeURIComponent(id)}&epi=${encodeURIComponent(parseInt(epi) - 1)}&dir=${encodeURIComponent(dir)}`;
+    document.getElementById("leftBtnLink").href = `./view.html?id=${$_GET.id}&epi=${parseInt(epi) - 1}&dir=${$_GET.dir}`;
 }else{
     document.getElementById("leftBtnLink").style.color = "gray"
 }
-document.getElementById("iframes").src = `${(dir)}/${(id)}/${(epi)}/${(epi)}.html`;
-document.getElementById("middleBtnLink").href = `./list.html?id=${encodeURIComponent(id)}&dir=${encodeURIComponent(dir)}`;
+document.getElementById("iframes").src = `${$_GET.dir}/${$_GET.id}/${$_GET.epi}/${$_GET.epi}.html`;
+document.getElementById("middleBtnLink").href = `./list.html?id=${$_GET.id}&dir=${$_GET.dir}&dir=${$_GET.dir}`;
 if(fs.existsSync(`${dir}/${id}/${parseInt(epi) + 1}/${parseInt(epi) + 1}.html`)){
-    document.getElementById("rightBtnLink").href = `./view.html?id=${encodeURIComponent(id)}&epi=${encodeURIComponent(parseInt(epi) + 1)}&dir=${encodeURIComponent(dir)}`;
+    document.getElementById("rightBtnLink").href = `./view.html?id=${$_GET.id}&epi=${parseInt(epi) + 1}&dir=${$_GET.dir}`;
 }else{
     document.getElementById("rightBtnLink").style.color = "gray"
 }
