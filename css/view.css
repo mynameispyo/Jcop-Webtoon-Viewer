@@ -1,0 +1,64 @@
+
+iframe{
+  border: none;
+  width: 100%;
+  position: absolute;
+  margin: none;
+  height: calc(100% - 40px);
+}
+
+body, html,iframe{
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+body, html{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.wt-content{
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+.menu-container{
+  width:600px;
+  margin: auto;
+  height: 100%;
+  margin-top: 5px;
+}
+
+.menu-container #middleBtnLink{
+  font-size:30px;
+  color: black;
+  float: left;
+  flex: 1;
+  margin-left: 10px;
+}
+.right-container {
+  float: right;
+}
+#leftBtnLink {
+  font-size:30px;
+  color: black;
+  flex: 1;
+}
+
+#rightBtnLink {
+  font-size:30px;
+  margin-left: 50px;
+  color: black;
+  flex: 1;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-container button {
+    width: calc(100% * 0.3);
+  }
+  .menu-container{
+    width:100%;
+  }
+}
